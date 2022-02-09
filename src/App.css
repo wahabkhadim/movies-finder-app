@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+body{
+background-color: #282c34;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
+  width: 100%;
   background-color: #282c34;
-  min-height: 100vh;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: x-large;
+  border: 2px solid rgba(0, 0, 0, 0.404);
+}
+.login-compl{
+  background-image: url(quino-al-JFeOy62yjXk-unsplash.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.main-heading{
+  margin-left: 35px;
+  margin-top: 30px;
+}
+.App-header div a{
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 23px;
+  font-weight: 120px;
+  text-decoration: none;
+
+}
+
+.second-heading{
+  display: flex;
+  flex-direction: row;
+  margin-left: 800px;
+  
+}
+.second-heading div{
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+.second-heading div p{
+  font-size: 15px;
+  margin-top: -40px;
+  background-color: red;
+}
+
+
+.second-heading div button{
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 20px;
+  font-weight: 120px;
+}
+.nav ul{
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: -10px;
+}
+
+.nav ul li{
+  display: inline-block;
+  margin: -5px;
+  margin-top: 20px;
+}
+.nav ul li button{
+  color: white;
+  padding: 8px;
+  margin: 10px;
+  border: 1px solid rgb(102, 102, 102);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.main:focus{
+  background-color: green;
+}
+
+
+
+
+.login-main{
+  background-color:#f7f7f7;;
+  margin-left: 100px;
+  float: right;
+  display: flex;
+  width: 40%;
+  height: 100vh;
+  flex-direction: column;
+}
+.login-main div{
+  margin-top: 40px;
+  margin-left: 50px;
+}
+#idofh1{
+  font-weight: bolder;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-left: 140px;
+  color: rgba(74,74,189,.91);
+
+}
+.idofinput[type="text"]{
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(121, 119, 119);
+  padding-left:20px ;
+  margin-top: -40px;
+}
+#loginbutton{
+  width: 425px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(121, 119, 119);
+  padding-left:20px ;
+  margin-top: -40px;
+  background-color: rgba(74,74,189,.91);
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+#registerid{
+  margin-left: 60px;
+  font-weight:bolder;
+  font-size: 40px;
+  color: rgba(74,74,189,.91);
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container{
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px 220px;
+  grid-template-rows: 450px 450px 450px 450px 450px;
+  padding: 50px;
+  padding-left: 130px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-item :hover{
+  text-align: center;
+  
+}
+
+.info-box{
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 110px;
+  padding-left: 10px;
+  padding-top: 5px;
+
+
+}
+
+#idofp{
+  font-weight: 100px;
+ 
+}
+a{
+  text-decoration: none;
+}
+.imgclick{
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+ 
+
+}
+.imgbutton{
+  
+  margin-left: 450px;
+
+  
+}
+#imgbutton{
+  font-size: 20px;
+  color: white;
+  background-color:black ;
+  
+  
+}
+#paraimg{
+  margin-top: 150px;
+  font-size: 20px;
+}
+
+
+#clickimgid{
+  margin-right: 20PX;
+}
+.clickablediv{
+  width: 1000px;
+  border: 1px solid white;
+  margin-top: 20px;
+  margin-left: 180px;
+  margin-bottom: 40px;
+  height: 550px;
+  background-color:rgb(68, 67, 55) ;
+}
+.discriptiondiv div{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-bottom: -20px;
+
 }
