@@ -24,25 +24,23 @@ class App extends React.Component {
     this.onAddUser=this.onAddUser.bind(this)
     this.checkLogin=this.checkLogin.bind(this)
     this.checkSignOut=this.checkSignOut.bind(this)
-    this.handleLoginClick=this.handleLoginClick.bind(this)
+    this.userLogin=this.userLogin.bind(this)
   }
   static contextType =MyContext
   onAddUser(obj){
     const updatedlist = [...this.state.userList,obj ]
-
     this.setState({
         userList: updatedlist
   })
 }
-handleLoginClick(item){
+userLogin(item){
   this.setState({loginUser:item})
 }
-
 
 checkLogin(){
   this.setState({isLogin:true})
 }
-checkSignOut=()=>{
+checkSignOut(){
   this.setState({
     isLogin:false,
     loginUser:null
@@ -56,7 +54,7 @@ checkSignOut=()=>{
       isLogin:this.state.isLogin,
       loginUser:this.state.loginUser
     }
-    console.log(data)
+    
   return (
 
     <div className="App">
@@ -67,7 +65,7 @@ checkSignOut=()=>{
       
         <Route exact path="/"> <MainPage checkSignOut={this.checkSignOut} /> </Route>
         <Route exact path="/register"> <Register onAddUser={this.onAddUser} /> </Route> 
-        <Route exact path="/login"> <Login checkLogin={this.checkLogin} handleLoginClick={this.handleLoginClick}  /> </Route>
+        <Route exact path="/login"> <Login checkLogin={this.checkLogin} userLogin={this.userLogin}  /> </Route>
 
       
         </Switch>
