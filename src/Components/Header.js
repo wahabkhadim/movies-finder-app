@@ -12,28 +12,23 @@ class Header extends React.Component {
         this.state = {
             isLogin: false
         }
-
         this.handleSignOut = this.handleSignOut.bind(this)
     }
-
     static contextType = MyContext
 
     handleSignOut() {
-        if (this.context.isLogin) {
-            return (
-                this.props.checkSignOut(),
-                this.props.history.push("/")
-            )
-        }
+                this.props.checkSignOut()
     }
 
         render(){
+            console.log(this.context.loginUser)
             return (
                 <header className="App-header">
                     <div className="main-heading">
                         <Link to="/">MOVIES TRACKER APP</Link>
                     </div>
-                    {!this.context.isLogin ?
+                    {
+                     !this.context.isLogin ?
                         <div className="second-heading">
                             <div>
                                 <Link to="/login">LOGIN</Link>
@@ -43,22 +38,16 @@ class Header extends React.Component {
                             </div>
                         </div>
                         :
-                        
-                        
                             <div className="second-heading">
                                 <div>
                                     <button onClick={this.handleSignOut}>Sign Out</button>
                                     <p> welcome {this.context.loginUser.username}</p>
                                 </div>
                             </div>
-                        
-
                     }
-
                 </header>
 
             )
         }
     }
-
 export default withRouter(Header);
