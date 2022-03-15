@@ -3,8 +3,6 @@ import { withRouter } from "react-router-dom";
 import Header from "./Header";
 
 
-
-
 class Register extends React.Component {
     constructor(props) {
         super(props)
