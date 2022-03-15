@@ -104,13 +104,13 @@ class MainPage extends React.Component {
                                     <div className="grid-container">
                                         {this.state.list.map(data => {
                                             return (
-                                                <div className="container-item" key={data.id}>
-                                                    <div onClick={() => this.handleImageClick(data)} >
+                                                <div className="container-item" onClick={() => this.handleImageClick(data)} key={data.id}>
+                                                    <div  >
                                                         <img src={IMG_URL + data.poster_path} alt="img" width="210px" />
                                                     </div>
                                                     <div className="info-box">
                                                         <p id="idofp">&#x2B50; {data.vote_average}</p>
-                                                        <h4 id="idofh4">{data.original_title} abc</h4>
+                                                        <h4 id="idofh4">{data.original_title} </h4>
                                                     </div>
                                                 </div>
                                             )
@@ -139,7 +139,7 @@ class MainPage extends React.Component {
                                                     </div>
                                                     <div className="info-box">
                                                         <p id="idofp">&#x2B50; {data.vote_average}</p>
-                                                        <h4 id="idofh4">{data.original_title} abc</h4>
+                                                        <h4 id="idofh4">{data.original_title} </h4>
                                                     </div>
                                                 </div>
                                             )
